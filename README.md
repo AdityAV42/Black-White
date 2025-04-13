@@ -31,3 +31,15 @@ A simple full-stack web app that lets users upload a photo and returns a **black
 - NPM
 - Git
 - AWS EC2 instance (optional for deployment)
+
+### Attached Screenshots
+![image](https://github.com/user-attachments/assets/e3e80004-e6be-420b-8c02-9d6c23cf5de0)
+
+
+
+![image](https://github.com/user-attachments/assets/df1b4030-373e-4492-93c3-2eed00eef51c)
+
+
+
+![image](https://github.com/user-attachments/assets/1e5b046e-f498-4028-8623-6ee1b45d5af0)
+
