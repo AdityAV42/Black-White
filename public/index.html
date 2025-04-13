@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grayscale Uploader</title>
+</head>
+<body>
+  <h1>Upload Photo to Convert to Black & White</h1>
+  <input type="file" id="fileInput">
+  <button onclick="uploadImage()">Upload & Convert</button>
+  <br><br>
+  <img id="resultImage" style="max-width: 500px; display: none;" />
+
+  <script>
+    async function uploadImage() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) return alert("Please select a file!");
+
+      const formData = new FormData();
+      formData.append('photo', file);
+
+      const response = await fetch('http://localhost:3000/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        alert("Image processing failed.");
+        return;
+      }
+
+      const blob = await response.blob();
+      const imageUrl = URL.createObjectURL(blob);
+
+      const img = document.getElementById('resultImage');
+      img.src = imageUrl;
+      img.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
