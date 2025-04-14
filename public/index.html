@@ -20,7 +20,7 @@
       const formData = new FormData();
       formData.append('photo', file);
 
-      const response = await fetch('http://16.171.25.108/upload', {
+      const response = await fetch('http://16.171.25.108:3000/upload', {
         method: 'POST',
         body: formData
       });
