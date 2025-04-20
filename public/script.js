@@ -7,7 +7,7 @@ async function uploadImage() {
   formData.append("photo", file); // "photo" (backend must use the same key name)
 
     // Amazon EC2 instance public IP - Hardcoded
-    const response = await fetch("http://56.228.23.40:3000/upload", {
+    const response = await fetch("http://edit-img.duckdns.org:3000/upload", {
       method: "POST",       //posts(sends) from frontend to backend
       body: formData,
     });
