@@ -1,42 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Grayscale Uploader</title>
-</head>
-<body>
-  <h1>Upload Photo to Convert to Black & White</h1>
-  <input type="file" id="fileInput">
-  <button onclick="uploadImage()">Upload & Convert</button>
-  <br><br>
-  <img id="resultImage" style="max-width: 500px; display: none;" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image to Grayscale</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-  <script>
-    async function uploadImage() {
-      const fileInput = document.getElementById('fileInput');
-      const file = fileInput.files[0];
-      if (!file) return alert("Please select a file!");
+  <body>
+    <h1>Upload a Photo to Convert to Black & White:</h1>
 
-      const formData = new FormData();
-      formData.append('photo', file);
+    <input type="file" id="fileInput" />
+    
+    <button onclick="uploadImage()">Upload & Convert</button>
+    
+    <br /><br />
+    <img id="resultImage" style="max-width: 500px; display: none" />
+    <!-- result image, initially hidden(display: none) -->
 
-      const response = await fetch('http://16.171.25.108:3000/upload', {
-        method: 'POST',
-        body: formData
-      });
+    <!-- Download button -->
+    <a id="downloadButton" style="display: none;" download="grayscale_image.png">
+      <button>Download</button>
+    </a>
 
-      if (!response.ok) {
-        alert("Image processing failed.");
-        return;
-      }
-
-      const blob = await response.blob();
-      const imageUrl = URL.createObjectURL(blob);
-
-      const img = document.getElementById('resultImage');
-      img.src = imageUrl;
-      img.style.display = 'block';
-    }
-  </script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
