@@ -18,7 +18,6 @@ A simple full-stack web app that lets users upload a photo and returns a **black
 - **Backend**: Node.js, Express
 - **Image Processing**: Sharp
 - **File Handling**: Multer
-- **Process Manager**: PM2 (for deployment)
 - **Hosting**: AWS EC2
 
 ---
