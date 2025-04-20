@@ -12,12 +12,11 @@ async function uploadImage() {
       body: formData,
     });
 
-
-  // Using localhost for local development
-//   const response = await fetch("http://localhost:3000/upload", {
-//     method: "POST", // Posts (sends) from frontend to backend
-//     body: formData,
-//   });
+    // Using localhost for local development
+    //   const response = await fetch("http://localhost:3000/upload", {
+    //     method: "POST", // Posts (sends) from frontend to backend
+    //     body: formData,
+    //   });
 
   if (!response.ok) {
     alert("Image processing failed.");
