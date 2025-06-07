@@ -25,7 +25,7 @@ async function uploadImage() {
       // });
 
       // Using duckdns domain name
-      const response = await fetch("http://edit-image.duckdns.org", {
+      const response = await fetch("http://edit-image.duckdns.org/upload", {
         method: "POST",
         body: formData,
       });
