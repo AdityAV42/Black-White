@@ -25,10 +25,10 @@ async function uploadImage() {
       // });
 
       // Using duckdns domain name
-      // const response = await fetch("http://edit-image.duckdns.org", {
-      //   method: "POST", // Posts (sends) from frontend to backend
-      //   body: formData,
-      // });
+      const response = await fetch("http://edit-image.duckdns.org", {
+        method: "POST",
+        body: formData,
+      });
 
   if (!response.ok) {
     alert("Image processing failed.");
