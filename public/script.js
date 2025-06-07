@@ -19,10 +19,16 @@ async function uploadImage() {
       // });
 
     // Using ec2 IP for development
-      const response = await fetch("http://3.139.95.131:5000/upload", {
-        method: "POST", // Posts (sends) from frontend to backend
-        body: formData,
-      });
+      // const response = await fetch("http://3.139.95.131:5000/upload", {
+      //   method: "POST", // Posts (sends) from frontend to backend
+      //   body: formData,
+      // });
+
+      // Using duckdns domain name
+      // const response = await fetch("http://edit-image.duckdns.org", {
+      //   method: "POST", // Posts (sends) from frontend to backend
+      //   body: formData,
+      // });
 
   if (!response.ok) {
     alert("Image processing failed.");
