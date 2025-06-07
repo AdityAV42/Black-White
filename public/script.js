@@ -13,6 +13,12 @@ async function uploadImage() {
     // });
 
     // Using localhost for local development
+      // const response = await fetch("http://localhost:5000/upload", {
+      //   method: "POST", // Posts (sends) from frontend to backend
+      //   body: formData,
+      // });
+
+    // Using ec2 IP for development
       const response = await fetch("http://3.139.95.131:5000/upload", {
         method: "POST", // Posts (sends) from frontend to backend
         body: formData,
