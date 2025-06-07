@@ -7,16 +7,16 @@ async function uploadImage() {
   formData.append("photo", file); // "photo" (backend must use the same key name)
 
     // Amazon EC2 instance public IP - Hardcoded
-    const response = await fetch("http://edit-img.duckdns.org:3000/upload", {
-      method: "POST",       //posts(sends) from frontend to backend
-      body: formData,
-    });
+    // const response = await fetch("http://edit-img.duckdns.org:3000/upload", {
+    //   method: "POST",       //posts(sends) from frontend to backend
+    //   body: formData,
+    // });
 
     // Using localhost for local development
-    //   const response = await fetch("http://localhost:3000/upload", {
-    //     method: "POST", // Posts (sends) from frontend to backend
-    //     body: formData,
-    //   });
+      const response = await fetch("http://3.139.95.131:5000/upload", {
+        method: "POST", // Posts (sends) from frontend to backend
+        body: formData,
+      });
 
   if (!response.ok) {
     alert("Image processing failed.");
