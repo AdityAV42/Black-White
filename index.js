@@ -7,7 +7,7 @@ const path = require('path');        //file path handling
 const fs = require('fs');            //filesystem access
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(cors());                      //Enables CORS--so your frontend (hosted on a different server like localhost:5500 or EC2 public IP) can make requests to this backend.
 app.use(express.static('public'));    // serves static files from the public folder (not used here, but good practice)
